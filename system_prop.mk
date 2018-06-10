@@ -21,11 +21,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480 \
     ro.zygote.disable_gl_preload=1
 
-# Media
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.legacyencoder=1 \
-    media.stagefright.less-secure=1
-
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
     nfc.app_log_level=2
