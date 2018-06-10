@@ -149,6 +149,9 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 # IR
 IR_HAL_SUFFIX := universal5410
 
+# HIDL
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+
 # Lineage Hardware
 BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw
 BOARD_HARDWARE_CLASS += device/samsung/exynos5410-common/lineagehw
