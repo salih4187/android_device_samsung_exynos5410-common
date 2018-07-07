@@ -75,10 +75,6 @@ BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/batt_lp_charging"
 
-# CMHW
-BOARD_HARDWARE_CLASS := hardware/samsung/cmhw
-BOARD_HARDWARE_CLASS += device/samsung/exynos5410-common/cmhw
-
 # Filesystems
 BLOCK_BASED_OTA := false
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
@@ -149,6 +145,10 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 # IR
 IR_HAL_SUFFIX := universal5410
+
+# Lineage Hardware
+BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw
+BOARD_HARDWARE_CLASS += device/samsung/exynos5410-common/lineagehw
 
 # NFC
 BOARD_NFC_HAL_SUFFIX := universal5410
