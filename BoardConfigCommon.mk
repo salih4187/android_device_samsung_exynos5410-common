@@ -88,6 +88,9 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# Display
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
+
 # Filesystem
 BOARD_ROOT_EXTRA_FOLDERS := efs
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
