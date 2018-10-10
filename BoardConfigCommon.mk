@@ -134,6 +134,9 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
 BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw
 BOARD_HARDWARE_CLASS += device/samsung/exynos5410-common/lineagehw
 
+# Netd
+TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
+
 # Recovery
 TARGET_RECOVERY_DENSITY := xhdpi
 
