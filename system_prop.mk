@@ -29,6 +29,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480 \
     ro.zygote.disable_gl_preload=1
 
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.stagefright.ccodec=0
+
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
     nfc.app_log_level=2
