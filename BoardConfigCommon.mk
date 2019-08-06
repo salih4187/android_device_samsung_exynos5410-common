@@ -136,6 +136,7 @@ TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 
 # Recovery
 TARGET_RECOVERY_DENSITY := xhdpi
+TARGET_RECOVERY_DEVICE_DIRS += device/samsung/exynos5410-common
 
 # Unified PowerHAL
 TARGET_POWERHAL_VARIANT := samsung
