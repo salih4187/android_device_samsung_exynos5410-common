@@ -139,9 +139,6 @@ TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_RECOVERY_DEVICE_DIRS += device/samsung/exynos5410-common
 
-# Unified PowerHAL
-TARGET_POWERHAL_VARIANT := samsung
-
 # Samsung  OpenMAX Video
 BOARD_USE_ANB_OUTBUF_SHARE := true
 BOARD_USE_CSC_HW := false
