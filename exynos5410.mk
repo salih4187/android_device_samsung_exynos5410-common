@@ -95,8 +95,8 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl.legacy \
-    android.hardware.gnss@1.0-service.legacy
+    android.hardware.gnss@1.0-impl.exynos5410 \
+    android.hardware.gnss@1.0-service.exynos5410
 
 # GPU
 PRODUCT_PACKAGES += \
