@@ -1,4 +1,5 @@
 # Audio
+lib/libaudioroute.so|46fcafe8de5c4fe078ad9e9e613bc260fd137106
 vendor/lib/liblvverx_3.18.11.so:vendor/lib/soundfx/liblvverx_3.18.11.so
 vendor/lib/liblvvetx_3.18.11.so:vendor/lib/soundfx/liblvvetx_3.18.11.so
 
