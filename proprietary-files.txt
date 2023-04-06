@@ -102,3 +102,4 @@ etc/wifi/nvram_net.txt_muratafem1
 etc/wifi/nvram_net.txt_muratafem2
 etc/wifi/nvram_net.txt_semco3rd
 etc/wifi/nvram_net.txt_semcosh
+vendor/lib/libwifi-hal.so|8ca593f15a67e5bd62c0fe9411c5ca59e031ec1b
