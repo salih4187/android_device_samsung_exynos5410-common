@@ -57,18 +57,25 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
     tinymix
 
 # Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/bluetooth/bt_did.conf:system/etc/bluetooth/bt_did.conf \
     $(COMMON_PATH)/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl-legacy \
+    camera.device@1.0-impl-legacy \
     camera.universal5410
 
 # Charger
@@ -91,12 +98,16 @@ PRODUCT_PACKAGES += \
 
 # HW composer
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
     hwcomposer.exynos5 \
     libion \
     memtrack.exynos5
 
 # IR
 PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl \
     consumerir.universal5410
 
 # Keylayouts
@@ -107,10 +118,12 @@ PRODUCT_COPY_FILES += \
 
 # Keystore
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
     keystore.exynos5
 
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.universal5410
 
 # Media profile
@@ -132,6 +145,7 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl-bcm \
     libnfc-nci \
     libnfc_nci_jni \
     nfc_nci.bcm2079x.default \
@@ -167,8 +181,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungServiceMode
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
+
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     hostapd \
     libnetcmdiface \
     macloader \
