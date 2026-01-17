@@ -34,6 +34,7 @@ LOCAL_SRC_FILES:= \
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libexynoscamera
+LOCAL_PROPRIETARY_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 
