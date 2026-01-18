@@ -17,8 +17,6 @@
 
 COMMON_PATH := device/samsung/exynos5410-common
 
-TARGET_UNOFFICIAL_BUILD_ID := MONTHLY
-
 # overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
@@ -161,20 +159,6 @@ NFCEE_ACCESS_PATH := $(COMMON_PATH)/nfc/nfcee_access.xml
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
     $(COMMON_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
-
-# OTA
-PRODUCT_PACKAGES += \
-    OTAUpdates
-
-# OMX
-PRODUCT_PACKAGES += \
-    libExynosOMX_Core \
-    libOMX.Exynos.AVC.Decoder \
-    libOMX.Exynos.MPEG4.Decoder \
-    libOMX.Exynos.MPEG4.Encoder \
-    libOMX.Exynos.VP8.Decoder \
-    libOMX.Exynos.WMV.Decoder \
-    libstagefrighthw
 
 # Power
 PRODUCT_PACKAGES += \
