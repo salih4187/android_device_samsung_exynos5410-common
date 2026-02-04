@@ -1,6 +1,6 @@
-import init.target.rc
-import init.universal5410.usb.rc
-import init.universal5410.wifi.rc
+import /vendor/etc/init/hw/init.universal5410.usb.rc
+import /vendor/etc/init/hw/init.universal5410.wifi.rc
+import /vendor/etc/init/hw/init.target.rc
 
 on init
     symlink /sdcard /storage/sdcard0
