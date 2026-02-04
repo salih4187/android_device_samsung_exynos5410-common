@@ -176,6 +176,10 @@ BOARD_SEPOLICY_DIRS += \
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /vendor/lib/egl/libGLESv2_POWERVR_SGX544_115.so|/vendor/lib/libshim_gpu.so
+
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI          := true
 BOARD_WLAN_DEVICE                := bcmdhd

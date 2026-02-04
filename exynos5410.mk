@@ -169,6 +169,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungServiceMode
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_gpu
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
