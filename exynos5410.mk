@@ -95,6 +95,9 @@ PRODUCT_PACKAGES += \
     pvrsrvctl \
     libcorkscrew
 
+# HIDL
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+
 # HW composer
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
