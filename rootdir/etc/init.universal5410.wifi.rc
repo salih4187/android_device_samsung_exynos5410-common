@@ -1,8 +1,5 @@
 # Wi-Fi init file
 
-# Create directory for hostapd
-    mkdir /data/hostapd 0770 system wifi
-
 on boot
 
     # Wifi firmware reload path
