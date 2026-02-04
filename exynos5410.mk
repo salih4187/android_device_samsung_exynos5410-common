@@ -193,7 +193,7 @@ PRODUCT_COPY_FILES += \
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+    persist.sys.usb.config=adb
 
 # Permissions
 PRODUCT_COPY_FILES += \
