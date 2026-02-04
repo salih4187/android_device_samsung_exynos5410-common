@@ -13,7 +13,7 @@ on init
     symlink /sys/devices/platform/s5p-ehci/ehci_power /dev/ehci_power
 
 on fs
-    mount_all /fstab.universal5410
+    mount_all /vendor/etc/fstab.universal5410
 
 on post-fs
     # Increase max readahead size to 256 KB
