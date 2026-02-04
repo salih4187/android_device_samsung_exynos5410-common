@@ -3,10 +3,31 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := pvrsrvctl.c
-LOCAL_LDFLAGS := -L vendor/samsung/exynos5410-common/proprietary/vendor/lib
-LOCAL_LDLIBS := -lsrv_init -lsrv_um
+LOCAL_SHARED_LIBRARIES := libsrv_init libsrv_um
 LOCAL_MODULE_PATH := $(TARGET_OUT)/bin/
 LOCAL_MODULE := pvrsrvctl
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_EXECUTABLE)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := dummy.c
+LOCAL_SHARED_LIBRARIES := libcutils
+LOCAL_MODULE := libsrv_init
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_VENDOR_MODULE := true
+
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := dummy.c
+LOCAL_SHARED_LIBRARIES := libcutils
+LOCAL_MODULE := libsrv_um
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_VENDOR_MODULE := true
+
+include $(BUILD_SHARED_LIBRARY)
