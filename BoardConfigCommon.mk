@@ -166,6 +166,8 @@ BOARD_SECCOMP_POLICY := device/samsung/exynos5410-common/seccomp
 #BOARD_SEPOLICY_DIRS += \
     device/samsung/exynos5410-common/sepolicy
 
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Sensors
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
