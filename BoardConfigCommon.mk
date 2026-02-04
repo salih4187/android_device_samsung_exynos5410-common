@@ -78,6 +78,10 @@ BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/batt_lp_charging"
 
+# Filesystem
+BOARD_ROOT_EXTRA_FOLDERS := efs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+
 # Filesystems
 BLOCK_BASED_OTA := false
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
