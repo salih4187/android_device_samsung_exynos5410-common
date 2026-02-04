@@ -159,7 +159,7 @@ BOARD_USES_NEON_BLITANTIH := true
 BOARD_SECCOMP_POLICY := device/samsung/exynos5410-common/seccomp
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
+#BOARD_SEPOLICY_DIRS += \
     device/samsung/exynos5410-common/sepolicy
 
 # Sensors
