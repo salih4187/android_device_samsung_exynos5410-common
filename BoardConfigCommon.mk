@@ -104,11 +104,6 @@ BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 USE_OPENGL_RENDERER := true
 
-# HDMI
-BOARD_HDMI_INCAPABLE := true
-#BOARD_USES_CEC := true
-#BOARD_USES_GSC_VIDEO := true
-
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
 # Increase the size if shaders of size greater than 12KB are used.
