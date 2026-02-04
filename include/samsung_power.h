@@ -1,7 +1,8 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2020 The LineageOS Project
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the "License"
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -25,11 +26,11 @@
  * device tree.
  */
 
-static const char* CPU_SYSFS_PATHS[1] = {
+static const std::vector<std::string> cpuSysfsPaths = {
     "/sys/devices/system/cpu/cpu0"
 };
 
-static const char* CPU_INTERACTIVE_PATHS[1] = {
+static const std::vector<std::string> cpuInteractivePaths = {
     "/sys/devices/system/cpu/cpufreq/interactive"
 };
 
