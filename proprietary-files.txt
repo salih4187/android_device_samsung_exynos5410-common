@@ -1,10 +1,10 @@
 # Camera
-lib/libexynoscamera.so
+lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
 lib/libhwjpeg.so
-lib/libvdis.so
+lib/libvdis.so:vendor/lib/libvdis.so
 
 # Camera/RIL
-lib/libstlport.so
+lib/libstlport.so:vendor/lib/libstlport.so
 
 # Graphics
 vendor/lib/egl/libEGL_POWERVR_SGX544_115.so
@@ -63,17 +63,17 @@ vendor/firmware/bcm2079xB4_pre_firmware.ncd
 lib/omx/libOMX.Exynos.AVC.Encoder.so
 
 # Sensors
-lib/hw/sensors.universal5410.so
-lib/libakm.so
-lib/libsensirion_j1.so
+lib/hw/sensors.universal5410.so:vendor/lib/sensors.vendor.universal5410.so
+lib/libakm.so:vendor/lib/libakm.so
+lib/libsensirion_j1.so:vendor/lib/libsensirion_j1.so
 
 # Sensorhubs
-bin/sensorhubservice
-lib/libgnustl_shared.so
-lib/libsensorhub.so
-lib/libsensorhubcontext.so
-lib/libsensorhubservice.so
-lib/hw/sensorhubs.universal5410.so
+bin/sensorhubservice:vendor/bin/sensorhubservice
+lib/libgnustl_shared.so:vendor/lib/libgnustl_shared.so
+lib/libsensorhub.so:vendor/lib/libsensorhub.so
+lib/libsensorhubcontext.so:vendor/lib/libsensorhubcontext.so
+lib/libsensorhubservice.so:vendor/lib/libsensorhubservice.so
+lib/hw/sensorhubs.universal5410.so:vendor/lib/hw/sensorhubs.universal5410.so
 
 # Widevine
 vendor/lib/mediadrm/libwvdrmengine.so

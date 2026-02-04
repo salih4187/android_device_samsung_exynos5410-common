@@ -2,7 +2,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2018 The Lineage OS Project
->>>>>>> 2cfc04d8 (jf: Rebrand proprietary-files extract scripts)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
