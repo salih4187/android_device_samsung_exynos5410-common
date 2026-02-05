@@ -82,7 +82,7 @@ BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/batt_lp_charging"
 
 # Filesystem
-BOARD_ROOT_EXTRA_FOLDERS := preload efs
+BOARD_ROOT_EXTRA_FOLDERS := efs
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Filesystems
