@@ -460,19 +460,19 @@ on fs
     chown system system /persdata/absolute
     chmod 0750 /persdata/absolute
 
-# 3D init
-service pvrsrvctl /system/vendor/bin/pvrsrvctl
-    class core
-    user root
-    group root
-    oneshot
-
 # NFC
     chmod 0600 /dev/pn547
     chown nfc nfc /dev/pn547
 
 # FingerPrint_sensor
     chown system system /sys/class/fingerprint/fingerprint/ocp_check
+
+# 3D init
+service pvrsrvctl /system/vendor/bin/pvrsrvctl
+    class core
+    user root
+    group root
+    oneshot
 
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /sbin/watchdogd 10 20
