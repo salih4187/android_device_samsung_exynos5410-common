@@ -7,6 +7,7 @@ lib/libvdis.so:vendor/lib/libvdis.so
 lib/libstlport.so:vendor/lib/libstlport.so
 
 # Graphics
+bin/pvrsrvctl:vendor/bin/pvrsrvctl
 vendor/lib/egl/libEGL_POWERVR_SGX544_115.so
 vendor/lib/egl/libGLESv1_CM_POWERVR_SGX544_115.so
 vendor/lib/egl/libGLESv2_POWERVR_SGX544_115.so
