@@ -167,6 +167,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libshim_binder \
     libshim_gpu
 
 # USB

@@ -176,7 +176,8 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
-    /vendor/lib/egl/libGLESv2_POWERVR_SGX544_115.so|/vendor/lib/libshim_gpu.so
+    /vendor/lib/egl/libGLESv2_POWERVR_SGX544_115.so|/vendor/lib/libshim_gpu.so \
+    /vendor/bin/sensorhubservice|/vendor/lib/libsensorhub.so
 
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI          := true
