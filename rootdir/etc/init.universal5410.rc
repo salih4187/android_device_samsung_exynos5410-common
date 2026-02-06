@@ -30,17 +30,17 @@ on post-fs-data
     mkdir /efs/drm 0700 drm system
     mkdir /efs/drm/playready 0775 drm system
 
-on boot
-    # override init.rc to keep plenty of large order chunks around
-    # to improve allocation times
-    write /proc/sys/vm/min_free_kbytes 32768
-    write /proc/sys/vm/min_free_order_shift 4
+    # Permissions for Camera to flush cache buffers
+    chown system system /sys/devices/virtual/sec/sec_misc/drop_caches
 
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
+on boot
     # setprop ro.radio.noril yes
 
     # Reduce reserved lowmem from ~48MB to ~12MB
-    write /proc/sys/vm/lowmem_reserve_ratio "128 128"
+    write /proc/sys/vm/lowmem_reserve_ratio "96 96"
+
+	# Increase min_free_kbytes from 3183 to 5120
+    write /proc/sys/vm/min_free_kbytes 5120
 
     # Set up kernel tracing, but disable it by default
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
@@ -81,15 +81,6 @@ on boot
 # Permissions for gpio_keys
     chown radio system /sys/class/sec/sec_key/wakeup_keys
     write /sys/class/sec/sec_key/wakeup_keys 116,172
-
-# mobicore
-    mkdir /data/app/mcRegistry 0775 system system
-    chmod 0700 /dev/mobicore
-    chmod 0666 /dev/mobicore-user
-    chmod 0660 /dev/s5p-smem
-    chown system system /dev/mobicore
-    chown radio system /dev/mobicore-user
-    chown system system /dev/s5p-smem
 
 # Permissions for bluetooth
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
