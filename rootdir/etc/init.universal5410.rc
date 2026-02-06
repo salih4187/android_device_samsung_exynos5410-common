@@ -479,7 +479,7 @@ service watchdogd /sbin/watchdogd 10 20
     disabled
 
 # Sensorhub service
-service sensorhubservice /system/bin/sensorhubservice
+service sensorhubservice /system/vendor/bin/sensorhubservice
     class main
     user system
     group input
