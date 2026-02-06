@@ -78,10 +78,6 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl-legacy \
     camera.universal5410
 
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl.legacy \
@@ -89,7 +85,6 @@ PRODUCT_PACKAGES += \
 
 # GPU
 PRODUCT_PACKAGES += \
-    pvrsrvctl \
     libcorkscrew
 
 # Health
