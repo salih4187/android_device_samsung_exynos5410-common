@@ -496,12 +496,10 @@ on property:sys.mobicoredaemon.enable=true
     start scranton_RD
 
 # MobiCore startup
-service mobicore /system/bin/mcDriverDaemon \
-    -r /system/vendor/firmware/mcRegistry/FFFFFFFF000000000000000000000001.drbin \
-    -r /system/vendor/firmware/mcRegistry/ffffffffd0000000000000000000000a.tlbin
-    class main
-    user drmrpc
-    group drmrpc
+service mobicore /system/bin/mcDriverDaemon -r /system/app/FFFFFFFF000000000000000000000001.drbin -r /system/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
+    class core
+    user system
+    group system
 
 service charger /system/bin/charger
     class charger
