@@ -127,6 +127,11 @@ IR_HAL_SUFFIX := universal5410
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
+# Legacy BLOB Support
+TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
+    /system/vendor/bin/hw/rild=27 \
+    /system/vendor/bin/hw/android.hardware.sensors@1.0-service.exynos5410=22
+
 # Lineage Hardware
 BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw
 BOARD_HARDWARE_CLASS += device/samsung/exynos5410-common/lineagehw
