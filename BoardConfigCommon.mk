@@ -131,9 +131,6 @@ DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw
 BOARD_HARDWARE_CLASS += device/samsung/exynos5410-common/lineagehw
 
-# NFC
-BOARD_NFC_HAL_SUFFIX := universal5410
-
 # Unified PowerHAL
 TARGET_POWERHAL_VARIANT := samsung
 
