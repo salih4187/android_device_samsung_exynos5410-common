@@ -4,46 +4,6 @@ import /vendor/etc/init/hw/init.target.rc
 
 on init
 
-    # See storage config details at http://source.android.com/tech/storage/
-    mkdir /mnt/media_rw/extSdCard 0700 media_rw media_rw
-    mkdir /mnt/media_rw/UsbDriveA 0700 media_rw media_rw
-    mkdir /mnt/media_rw/UsbDriveB 0700 media_rw media_rw
-    mkdir /mnt/media_rw/UsbDriveC 0700 media_rw media_rw
-    mkdir /mnt/media_rw/UsbDriveD 0700 media_rw media_rw
-    mkdir /mnt/media_rw/UsbDriveE 0700 media_rw media_rw
-    mkdir /mnt/media_rw/UsbDriveF 0700 media_rw media_rw
-
-    # See storage config details at http://source.android.com/tech/storage/
-    #mkdir /mnt/shell/emulated 0700 shell shell
-    #mkdir /storage/emulated 0555 root root
-
-    #export EXTERNAL_STORAGE /storage/emulated/legacy
-    #export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
-    #export EMULATED_STORAGE_TARGET /storage/emulated
-
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
-    symlink /data/app /factory
-
-    # map "real" external storages paths also in same way. backwards compatibility.
-    symlink /storage/extSdCard /mnt/extSdCard
-    symlink /storage/UsbDriveA /mnt/UsbDriveA
-    symlink /storage/UsbDriveB /mnt/UsbDriveB
-    symlink /storage/UsbDriveC /mnt/UsbDriveC
-    symlink /storage/UsbDriveD /mnt/UsbDriveD
-    symlink /storage/UsbDriveE /mnt/UsbDriveE
-    symlink /storage/UsbDriveF /mnt/UsbDriveF
-
-    export SECONDARY_STORAGE /storage/extSdCard
-
-    mkdir /storage/extSdCard 0700 root root
-    mkdir /storage/UsbDriveA 0700 root root
-    mkdir /storage/UsbDriveB 0700 root root
-    mkdir /storage/UsbDriveC 0700 root root
-    mkdir /storage/UsbDriveD 0700 root root
-    mkdir /storage/UsbDriveE 0700 root root
-    mkdir /storage/UsbDriveF 0700 root root
-
     symlink /dev/block/mmcblk0p13 /dev/mbin0
     restorecon /dev/mbin0
     symlink /sys/devices/platform/s5p-ehci/ehci_power /dev/ehci_power
@@ -51,13 +11,6 @@ on init
     symlink /dev/block/mmcblk0p8 /dev/block/param
 
 on post-fs-data
-    # we will remap this as /mnt/sdcard with the sdcard fuse tool
-    mkdir /data/media 0770 media_rw media_rw
-    chown media_rw media_rw /data/media
-
-    # we will remap this as /storage/container with the sdcard fuse tool
-    mkdir /data/container 0770 system system
-    chown system system /data/container
 
 # SA, System SW, SAMSUNG create log directory
     mkdir /data/log 0775 system log
