@@ -173,6 +173,7 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
+    /vendor/lib/libsec-ril.so|/vendor/lib/libshim_atomic.so \
     /vendor/lib/libsensorhub.so|/vendor/lib/libshim_binder.so \
     /vendor/lib/libexynoscamera.so|/vendor/lib/libshim_camera.so \
     /vendor/lib/egl/libGLESv2_POWERVR_SGX544_115.so|/vendor/lib/libshim_gpu.so
