@@ -1,4 +1,5 @@
 # Camera
+lib/hw/camera.universal5410.so:vendor/lib/camera.universal5410.so
 lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
 lib/libhwjpeg.so
 lib/libvdis.so:vendor/lib/libvdis.so
