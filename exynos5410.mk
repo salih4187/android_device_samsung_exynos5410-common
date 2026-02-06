@@ -138,7 +138,9 @@ PRODUCT_PACKAGES += \
 
 # MobiCore
 PRODUCT_PACKAGES += \
-    mcDriverDaemon
+    mcDriverDaemon \
+    libMcClient \
+    libMcRegistry
 
 # NFC
 PRODUCT_PACKAGES += \
