@@ -131,11 +131,11 @@ on boot
 
 # mobicore
     mkdir /data/app/mcRegistry 0775 system system
-    #chmod 0700 /dev/mobicore
-    #chmod 0666 /dev/mobicore-user
+    chmod 0700 /dev/mobicore
+    chmod 0666 /dev/mobicore-user
     chmod 0660 /dev/s5p-smem
-    #chown system system /dev/mobicore
-    #chown radio system /dev/mobicore-user
+    chown system system /dev/mobicore
+    chown radio system /dev/mobicore-user
     chown system system /dev/s5p-smem
 
 # Permissions for bluetooth
@@ -158,7 +158,6 @@ on boot
 
 on fs
     mount_all /vendor/etc/fstab.universal5410
-    setprop ro.crypto.fuse_sdcard true
 
     chown radio radio /sys/devices/virtual/misc/multipdp/waketime
     chmod 0660 /sys/devices/virtual/misc/umts_dm0/dm_state
