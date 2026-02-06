@@ -69,7 +69,6 @@ PRODUCT_PACKAGES += \
     libbt-vendor
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/bluetooth/bt_did.conf:system/etc/bluetooth/bt_did.conf \
     $(COMMON_PATH)/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
 # Camera
