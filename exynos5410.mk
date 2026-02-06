@@ -89,8 +89,10 @@ PRODUCT_PACKAGES += \
     pvrsrvctl \
     libcorkscrew
 
-# HIDL
-PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-impl \
+    android.hardware.health@2.0-service
 
 # HW composer
 PRODUCT_PACKAGES += \
