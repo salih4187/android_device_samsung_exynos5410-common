@@ -14,6 +14,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.running_without_sync_framework = true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers = 3 \
+    debug.sf.enable_gl_backpressure=1 \
     ro.opengles.version=131072 \
     ro.sf.lcd_density=480 \
     ro.zygote.disable_gl_preload=1
