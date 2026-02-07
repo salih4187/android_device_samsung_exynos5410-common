@@ -450,7 +450,3 @@ service charger /system/bin/charger
     group system
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
-
-on property:sys.boot_completed=1
-# Set preferred IO scheduler after boot
-    setprop sys.io.scheduler bfq
