@@ -84,6 +84,11 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl-legacy \
     camera.universal5410
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl.legacy \
