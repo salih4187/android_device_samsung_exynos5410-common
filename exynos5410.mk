@@ -250,5 +250,8 @@ endif
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# call Samsung LSI board support package
+$(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
+
 # call the common proprietary setup
 $(call inherit-product, vendor/samsung/exynos5410-common/exynos5410-common-vendor.mk)
