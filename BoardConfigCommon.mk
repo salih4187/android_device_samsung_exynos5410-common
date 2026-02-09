@@ -124,6 +124,7 @@ DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 # Legacy BLOB Support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
+    /system/bin/mediaserver=22 \
     /system/vendor/bin/hw/rild=27 \
     /system/vendor/bin/hw/android.hardware.sensors@1.0-service.exynos5410=22
 
