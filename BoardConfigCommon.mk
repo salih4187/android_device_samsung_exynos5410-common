@@ -168,9 +168,6 @@ TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libexynoscamera.so|/vendor/lib/libshim_camera.so \
     /vendor/lib/egl/libGLESv2_POWERVR_SGX544_115.so|/vendor/lib/libshim_gpu.so
 
-# Virtual Display
-BOARD_USES_VIRTUAL_DISPLAY := true
-
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI          := true
 BOARD_WLAN_DEVICE                := bcmdhd
