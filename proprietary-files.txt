@@ -65,9 +65,6 @@ bin/scranton_RD
 vendor/firmware/bcm2079xB4_firmware.ncd
 vendor/firmware/bcm2079xB4_pre_firmware.ncd
 
-# OMX
-lib/omx/libOMX.Exynos.AVC.Encoder.so
-
 # Sensors
 lib/hw/sensors.universal5410.so:vendor/lib/sensors.vendor.universal5410.so
 lib/libakm.so:vendor/lib/libakm.so

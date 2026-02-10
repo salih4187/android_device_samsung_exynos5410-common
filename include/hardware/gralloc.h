@@ -153,6 +153,8 @@ enum {
     GRALLOC_USAGE_PRIVATE_2             = 0x40000000U,
     GRALLOC_USAGE_PRIVATE_3             = 0x80000000U,
     GRALLOC_USAGE_PRIVATE_MASK          = 0xF0000000U,
+
+    GRALLOC_USAGE_INTERNAL_ONLY         = 0x10000000U,
 };
 
 /*****************************************************************************/
