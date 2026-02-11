@@ -84,6 +84,7 @@ vendor/lib/mediadrm/libwvdrmengine.so
 # Wifi
 etc/wifi/bcmdhd_apsta.bin
 etc/wifi/bcmdhd_apsta.bin_a0
+etc/wifi/bcmdhd_ibss.bin
 etc/wifi/bcmdhd_mfg.bin
 etc/wifi/bcmdhd_mfg.bin_a0
 etc/wifi/bcmdhd_sta.bin
