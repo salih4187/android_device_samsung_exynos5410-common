@@ -126,10 +126,6 @@ BOARD_HARDWARE_CLASS += device/samsung/exynos5410-common/lineagehw
 # Unified PowerHAL
 TARGET_POWERHAL_VARIANT := samsung
 
-ifeq ($(WITH_TWRP),true)
--include $(COMMON_PATH)/twrp.mk
-endif
-
 # Samsung  OpenMAX Video
 BOARD_USE_ANB_OUTBUF_SHARE := true
 BOARD_USE_CSC_HW := false
