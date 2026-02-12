@@ -214,6 +214,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service.legacy \
     hostapd \
+    wificond \
     libnetcmdiface \
     macloader \
     wpa_supplicant \
