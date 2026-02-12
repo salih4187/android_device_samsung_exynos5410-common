@@ -54,7 +54,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     oneshot
 
 service macloader /vendor/bin/macloader
-    class main
+    class late_start
     user system
     group system wifi
     oneshot
