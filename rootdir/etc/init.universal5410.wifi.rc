@@ -39,6 +39,11 @@ on boot
     # Wifi firmware reload path
     chown wifi wifi /sys/module/dhd/parameters/firmware_path
 
+# Run deferred initcalls of builtin kernel modules (bcmdhd)
+service wifiloader /vendor/bin/wifiloader
+    class main
+    oneshot
+
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 \
     -g@android:wpa_wlan0
