@@ -193,7 +193,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service.exynos5410
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/sensors/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
+    $(COMMON_PATH)/hardware/sensors/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
 
 # Shims
 PRODUCT_PACKAGES += \
