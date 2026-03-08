@@ -38,7 +38,6 @@ on post-fs-data
     chown system camera /data
 
 on boot
-    # setprop ro.radio.noril yes
 
     # Reduce reserved lowmem from ~48MB to ~12MB
     write /proc/sys/vm/lowmem_reserve_ratio "96 96"
@@ -50,8 +49,6 @@ on boot
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
     write /sys/kernel/debug/tracing/tracing_on 0
 
-    setprop ro.build.product universal_5410
-    setprop ro.product.device universal_5410
     chmod 0666 /dev/pvrsrvkm
 
 # Permissions for TouchScreen
@@ -391,24 +388,9 @@ on fs
     chown media audio /sys/class/2mic/es325/sleep
     chown media audio /sys/class/2mic/es325/veq
 
-#For Absolute Persistence Partition
-    mkdir /persdata 0755 system system
-    mkdir /persdata/absolute 0750 system system
-
-    wait /dev/block/platform/dw_mmc.0/by-name/PERSDATA
-    mount ext4 /dev/block/platform/dw_mmc.0/by-name/PERSDATA /persdata/absolute nosuid nodev barrier=1
-
-    chown system system /persdata
-    chmod 0755 /persdata
-    chown system system /persdata/absolute
-    chmod 0750 /persdata/absolute
-
 # NFC
     chmod 0600 /dev/pn547
     chown nfc nfc /dev/pn547
-
-# FingerPrint_sensor
-    chown system system /sys/class/fingerprint/fingerprint/ocp_check
 
 # 3D init
 service pvrsrvctl /system/vendor/bin/pvrsrvctl
