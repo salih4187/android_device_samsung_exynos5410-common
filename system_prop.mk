@@ -23,6 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.running_without_sync_framework = true \
     ro.bq.gpu_to_cpu_unsupported=1 \
+    debug.hwc.winupdate=0 \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
     ro.opengles.version=131072 \
