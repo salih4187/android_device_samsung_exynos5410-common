@@ -86,7 +86,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl.exynos5410 \
     camera.device@1.0-impl.exynos5410 \
-    camera.universal5410
+    camera.universal5410 \
+    libhwjpeg
 
 # DRM
 PRODUCT_PACKAGES += \
