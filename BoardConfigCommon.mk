@@ -129,6 +129,9 @@ BOARD_HDMI_INCAPABLE := true
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
+# Keymaster
+BOARD_USES_TRUST_KEYMASTER := true
+
 # Legacy BLOB Support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/bin/mediaserver=22 \
