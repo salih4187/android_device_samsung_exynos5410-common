@@ -11,6 +11,8 @@ on init
 
     symlink /dev/block/mmcblk0p8 /dev/block/param
 
+    write /proc/sys/vm/page-cluster 0
+
 on post-fs-data
 
 # SA, System SW, SAMSUNG create log directory
@@ -103,6 +105,7 @@ on boot
 
 on fs
     mount_all /vendor/etc/fstab.universal5410
+    swapon_all /vendor/etc/fstab.universal5410
 
     chown radio radio /sys/devices/virtual/misc/multipdp/waketime
     chmod 0660 /sys/devices/virtual/misc/umts_dm0/dm_state
