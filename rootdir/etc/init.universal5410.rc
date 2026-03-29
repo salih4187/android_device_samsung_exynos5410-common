@@ -19,6 +19,10 @@ on init
 
 on post-fs-data
 
+# we will remap this as /storage/container with the sdcard fuse tool
+    mkdir /data/container 0770 system system
+    chown system system /data/container
+
 # SA, System SW, SAMSUNG create log directory
     mkdir /data/log 0775 system log
     mkdir /data/anr 0775 system system
@@ -183,6 +187,8 @@ on fs
     chown system radio /sys/class/sensors/ssp_sensor/mcu_sleep_test
     chown system radio /sys/class/sensors/ssp_sensor/ori_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/mag_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/ssp_flush
+    chown system radio /sys/class/sensors/ssp_sensor/meta_device
 
 # IR_LED
     chown system radio /sys/class/sec/sec_ir/ir_send
@@ -223,11 +229,6 @@ on fs
     chown system system /sys/class/sec/led/led_blink
     chown system system /sys/class/sec/led/led_br_lev
     chown system system /sys/class/sec/led/led_lowpower
-
-# Switch Device
-    chown system radio /sys/class/sec/switch/otg_test
-    chown system radio /sys/class/sec/switch/adc
-    chown system radio /sys/class/sec/switch/apo_factory
 
 # OTG_TEST
     chown system radio /sys/class/host_notify/usb_otg/booster
@@ -366,7 +367,7 @@ on fs
 
 # Permissions for LCD
     chown system radio /sys/class/lcd/panel/lcd_type
-    chown system system /sys/class/lcd/panel/power_reduce
+    chown system media_rw /sys/class/lcd/panel/power_reduce
     chown system system /sys/class/lcd/panel/siop_enable
     chown system system /sys/class/graphics/fb0/lcdfreq/level
     chown system system /sys/class/lcd/panel/temperature
@@ -380,8 +381,6 @@ on fs
     chmod 0644 /sys/module/gsc/parameters/gsc_dbg
 
 # Switch Device
-    chown system radio /sys/class/sec/switch/uart_sel
-    chown system radio /sys/class/sec/switch/usb_sel
     chown system radio /sys/class/sec/switch/usb_state
     chown system radio /sys/class/sec/switch/chg_type
 
@@ -395,22 +394,12 @@ on fs
     chown media audio /sys/class/2mic/es325/sleep
     chown media audio /sys/class/2mic/es325/veq
 
-# NFC
-    chmod 0600 /dev/pn547
-    chown nfc nfc /dev/pn547
-
 # 3D init
 service pvrsrvctl /system/vendor/bin/pvrsrvctl
     class core
     user root
     group root
     oneshot
-
-# Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
-service watchdogd /sbin/watchdogd 10 20
-    class core
-    seclabel u:r:watchdogd:s0
-    disabled
 
 # Sensorhub service
 service sensorhubservice /system/vendor/bin/sensorhubservice
@@ -428,12 +417,6 @@ service scranton_RD /system/bin/scranton_RD
 # start for TZPR provisioning version check app
 on property:sys.mobicoredaemon.enable=true
     start scranton_RD
-
-# MobiCore startup
-service mobicore /system/bin/mcDriverDaemon -r /system/app/FFFFFFFF000000000000000000000001.drbin -r /system/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
-    class core
-    user system
-    group system
 
 service charger /system/bin/charger
     class charger
