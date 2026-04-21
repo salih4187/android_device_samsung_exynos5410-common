@@ -28,8 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
     ro.opengles.version=131072 \
-    ro.sf.lcd_density=480 \
-    ro.zygote.disable_gl_preload=1
+    ro.sf.lcd_density=480
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
