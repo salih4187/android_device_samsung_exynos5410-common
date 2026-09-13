@@ -23,6 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     debug.hwc.winupdate=0 \
+    debug.hwui.use_buffer_age=false \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
     ro.opengles.version=131072 \
