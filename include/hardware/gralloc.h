@@ -139,14 +139,6 @@ enum {
      * gralloc modules. */
     GRALLOC_USAGE_ALLOC_MASK            = ~(GRALLOC_USAGE_FOREIGN_BUFFERS),
 
-    GRALLOC_USAGE_PROTECTED_DPB         = 0x00800000U,
-    /* buffer will be used by the HW IPs when sysmmu is off */
-    GRALLOC_USAGE_PHYSICALLY_LINEAR     = 0x01000000U,
-    GRALLOC_USAGE_PRIVATE_NONSECURE     = 0x02000000U,
-    GRALLOC_USAGE_CAMERA_RESERVED       = 0x04000000U,
-    GRALLOC_USAGE_NOZEROED              = 0x08000000U,
-    GRALLOC_USAGE_VIDEO_EXT             = 0x10000000U,
-
     /* implementation-specific private usage flags */
     GRALLOC_USAGE_PRIVATE_0             = 0x10000000U,
     GRALLOC_USAGE_PRIVATE_1             = 0x20000000U,
@@ -155,6 +147,18 @@ enum {
     GRALLOC_USAGE_PRIVATE_MASK          = 0xF0000000U,
 
     GRALLOC_USAGE_INTERNAL_ONLY         = 0x10000000U,
+    GRALLOC_USAGE_EXTERNAL_FLEXIBLE     = 0x20000000U,
+    GRALLOC_USAGE_EXTERNAL_BLOCK        = 0x40000000U,
+    GRALLOC_USAGE_EXTERNAL_ONLY         = 0x80000000U,
+    GRALLOC_USAGE_EXTERNAL_VIRTUALFB    = 0x00400000U,
+    GRALLOC_USAGE_PROTECTED_DPB         = 0x00800000U,
+    /* buffer will be used by the HW IPs when sysmmu is off */
+    GRALLOC_USAGE_PHYSICALLY_LINEAR     = 0x01000000U,
+    GRALLOC_USAGE_PRIVATE_NONSECURE     = 0x02000000U,
+    GRALLOC_USAGE_CAMERA_RESERVED       = 0x04000000U,
+    GRALLOC_USAGE_NOZEROED              = 0x08000000U,
+    GRALLOC_USAGE_VIDEO_EXT             = 0x10000000U,
+    GRALLOC_USAGE_GPU_BUFFER            = 0x00800000U,
 };
 
 /*****************************************************************************/
@@ -414,7 +418,11 @@ typedef struct alloc_device_t {
 static inline int gralloc_open(const struct hw_module_t* module, 
         struct alloc_device_t** device) {
     return module->methods->open(module, 
+#ifdef __cplusplus
+            GRALLOC_HARDWARE_GPU0, reinterpret_cast<struct hw_device_t**>(device));
+#else
             GRALLOC_HARDWARE_GPU0, TO_HW_DEVICE_T_OPEN(device));
+#endif
 }
 
 static inline int gralloc_close(struct alloc_device_t* device) {

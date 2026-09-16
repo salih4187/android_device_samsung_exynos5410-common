@@ -16,7 +16,6 @@ cc_library_shared {
         "android.hardware.camera.common@1.0",
         "android.hardware.graphics.allocator@2.0",
         "android.hardware.graphics.mapper@2.0",
-        "android.hardware.graphics.mapper@3.0",
         "android.hardware.graphics.common@1.0",
         "android.hidl.allocator@1.0",
         "android.hidl.memory@1.0",
@@ -35,7 +34,7 @@ cc_library_shared {
         "frameworks/native/include/media/openmax",
         "frameworks/native/libs/binder/include",
         "system/core/libion/include",
-        "device/samsung/universal5420-common/hardware/camera/device/include"
+        "device/samsung/exynos5410-common/hardware/camera/device/include"
     ],
     export_include_dirs: ["."],
     header_libs: [

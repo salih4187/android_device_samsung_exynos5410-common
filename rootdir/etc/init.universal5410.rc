@@ -1,7 +1,7 @@
-import /vendor/etc/init/hw/init.universal5410.usb.rc
-import /vendor/etc/init/hw/init.universal5410.wifi.rc
-import /vendor/etc/init/hw/init.samsung.rc
-import /vendor/etc/init/hw/init.target.rc
+import init.universal5410.usb.rc
+import init.universal5410.wifi.rc
+import init.samsung.rc
+import init.target.rc
 
 on early-init
 
@@ -112,8 +112,8 @@ on boot
     chown bluetooth bluetooth /dev/btlock
 
 on fs
-    mount_all /vendor/etc/fstab.universal5410
-    swapon_all /vendor/etc/fstab.universal5410
+    mount_all /fstab.universal5410
+    swapon_all /fstab.universal5410
 
     chown radio radio /sys/devices/virtual/misc/multipdp/waketime
     chmod 0660 /sys/devices/virtual/misc/umts_dm0/dm_state
@@ -395,7 +395,7 @@ on fs
     chown media audio /sys/class/2mic/es325/veq
 
 # 3D init
-service pvrsrvctl /system/vendor/bin/pvrsrvctl
+service pvrsrvctl /system/vendor/bin/pvrsrvctl --start --no-module
     class core
     user root
     group root
